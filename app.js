@@ -20,7 +20,7 @@ const userRoute = require('./routes/user')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 
-// mongoose.connect('mongodb+srv://aryman:aryman1@sbs.ifuxome.mongodb.net/?appName=SBS')
+// mongoose.connect('m')
 // .then(() => {
 //     console.log('MongoDB connected successfully with database')
 // })
