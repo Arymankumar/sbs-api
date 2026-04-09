@@ -99,7 +99,7 @@ Router.get('/contactById/:Id', async (req, res) => {
 
 })
 //get contact by gender
-Router.get('/gender/:g', async (res, res) => {
+Router.get('/gender/:g', async (req, res) => {
     try {
         const contact = await Contact.find({ gender: req.params.g })
         res.status(200).json({
@@ -113,32 +113,32 @@ Router.get('/gender/:g', async (res, res) => {
 
 //  delete api
 Router.delete('/:id', async (req, res) => {
-    try{
+    try {
         await contact
-    res.status(200).json({
-        msg: 'data delete'
-    })
-}
-catch(err) {
-    console.log(err)
-    res.status(500).json({
-        erroe: err
-    })
-}
+        res.status(200).json({
+            msg: 'data delete'
+        })
+    }
+    catch (err) {
+        console.log(err)
+        res.status(500).json({
+            erroe: err
+        })
+    }
 })
 // delete all api
-Router.delete('/:byGeneder/:gender',async(req,res)=>{
-    try{
-await Contact.deleteMany('gender:req')
-res.status(200).json({
-    msg:'delete the all contact'
-})
+Router.delete('/:byGeneder/:gender', async (req, res) => {
+    try {
+        await Contact.deleteMany('gender:req')
+        res.status(200).json({
+            msg: 'delete the all contact'
+        })
     }
-    catch(err){
-console.log(err)
-res.status(500).json({
-    error:err
-})
+    catch (err) {
+        console.log(err)
+        res.status(500).json({
+            error: err
+        })
 
     }
 })
